@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>DraggenDroppen Demo</title>
+	<meta charset="utf-8" />
+	<style type="text/css" media="screen">
+		html, body { height: 100%; background-color: #ffffff;}
+		body { margin: 0; padding: 0; overflow: hidden; }
+		#flashContent { width: 100%; height: 100%; }
+	</style>
+</head>
+<body>
+	<script src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>	
+	<script src="js/DraggenDroppen.js"></script>	
+	<script>
+
+		(function() {
+
+			var flashVars = {};
+			var flashParams = {
+				allowscriptaccess: "always",
+				bgcolor: "#FFFFFF",
+				wmode: "opaque",
+				scale: "noscale",
+				align: "left",
+				salign: "tl"
+			};
+			var flashAttribs = {
+				id: "flashContent",
+				name: "flashContent"
+			};
+
+			swfobject.embedSWF("DraggenDroppenDemo.swf", "flashDiv", "100%", "100%", "9.0", "expressInstall.swf", flashVars, flashParams, flashAttribs, function(e) {
+				DraggenDroppen.init(e.ref);
+			});
+
+		})();
+
+	</script>
+
+	<div id="flashDiv"></div>
+
+</body>
+</html>
