@@ -87,8 +87,9 @@ HTML:
 
 - Chrome 6
 - Firefox 3.6
+- Safari 6
 - Opera 11.1
 - IE 10
 
-Safari and IE <= 9 are currently not supported due to lack of `FileReader` support.
+Safari < 6 and IE < 10 are currently not supported due to lack of `FileReader` support.
 
